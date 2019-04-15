@@ -1,0 +1,21 @@
+<div class="img-thumbnail">
+    <img src="./assets/images/house.jpeg" alt="House picture">
+    <div class="caption" *ngIf="!item.showDetails">
+
+      <h3 class="label">{{item.address}}</h3>
+      <h4 class="label">{{item.price}}</h4>
+      <h5 class="label">{{item.type}}</h5>
+      <hr>
+      <button class="btn btn-sm btn-success" *ngIf="!showDetails" (click)="item.showDetails = !item.showDetails">
+        details
+      </button>
+    </div>
+
+    <div class="details" *ngIf="item.showDetails">
+      <span class="label">Beds : {{item.bedrooms}}</span>
+      <hr>
+      <button class="btn btn-sm btn-success" *ngIf="!showDetails" (click)="item.showDetails = !item.showDetails">
+        back
+      </button>
+    </div>
+ </div>
